@@ -17,15 +17,16 @@ const Home = () => {
     const [notice, setNotice] = useState(true);
 
     const check = (e) => {
-        // e.preventDefault()
+        e.preventDefault()
         const d = new Date(startDate);
         const date = d.getDate();
         const year = d.getFullYear();
         const month = d.getMonth();
-        const result = Math.floor((date + year + (month + 1)) / luckNum);
+        const result = ((date + year + (month + 1)) % luckNum);
+        console.log(result);
 
 
-        if (result % 2 === 0) {
+        if (result === 0) {
             setLuck(true);
             setBadLuck(null);
         } else {
@@ -47,7 +48,7 @@ const Home = () => {
             </div>
 
             <div id="details-sec" className="intro">
-                <form onSubmit={check}>
+                <form onSubmit={(e)=> check(e)}>
 
                     {notice &&
                         <div id="border">
