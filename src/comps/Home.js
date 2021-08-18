@@ -92,10 +92,10 @@ const Home = () => {
 
                 <footer>
                     <h3 id="icons-grid">
-                        <span className="icons"><FaLinkedinIn /></span>
-                        <span className="icons"><FaGithub /></span>
-                        <span className="icons"> <FaTelegramPlane /></span>
-                        <span className="icons"> <FaDiscord /></span>
+                       <a href="https://www.linkedin.com/in/chandan-pk-510bb817a/"> <span className="icons"><FaLinkedinIn /></span> </a>
+                       <a href="https://github.com/ChandanPk"> <span className="icons"><FaGithub /></span> </a>
+                       <a href="https://www.instagram.com/chandan_paull/"> <span className="icons"> <FaInstagram /></span> </a>
+                       <a href="https://chandankumar-portfolio.netlify.app/"> <span className="icons"> <FaBriefCase /></span> </a>
                     </h3>
                     <p id="copy-right">&copy; 2021 | chandan Kumar</p>
                 </footer>
