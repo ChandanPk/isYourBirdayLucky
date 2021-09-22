@@ -18,11 +18,26 @@ const Home = () => {
 
     const check = (e) => {
         e.preventDefault()
+
+        //funtions
+        const addEach = (arry) => {
+            let sum = 0;
+            for (const item of arry) {
+                sum += parseInt(item);
+            }
+            return sum;
+        }
+
         const d = new Date(startDate);
-        const date = d.getDate();
-        const year = d.getFullYear();
-        const month = d.getMonth();
-        const result = ((date + year + (month + 1)) % luckNum);
+        const date = String(d.getDate());
+        const year = String(d.getFullYear());
+        const month = String(d.getMonth() + 1);
+
+        // Addition of date
+        const newDate = addEach(date);
+        const newYear = addEach(year);
+        const newMonth = addEach(month);
+        const result = (newDate + newMonth + newYear) % luckNum;
 
         if (result === 0) {
             setLuck(true);
@@ -46,7 +61,7 @@ const Home = () => {
             </div>
 
             <div id="details-sec" className="intro">
-                <form onSubmit={(e)=> check(e)}>
+                <form onSubmit={(e) => check(e)}>
 
                     {notice &&
                         <div id="border">
@@ -89,11 +104,11 @@ const Home = () => {
 
 
                 <footer>
-                <h3 id="icons-grid">
-                       <a href="https://www.linkedin.com/in/chandan-pk-510bb817a/"> <span className="icons"><FaLinkedinIn /></span> </a>
-                       <a href="https://github.com/ChandanPk"> <span className="icons"><FaGithub /></span> </a>
-                       <a href="https://www.instagram.com/chandan_paull/"> <span className="icons"> <FaInstagram /></span> </a>
-                       <a href="https://chandankumar-portfolio.netlify.app/"> <span className="icons"> <FaBriefcase /></span> </a>
+                    <h3 id="icons-grid">
+                        <a href="https://www.linkedin.com/in/chandan-pk-510bb817a/"> <span className="icons"><FaLinkedinIn /></span> </a>
+                        <a href="https://github.com/ChandanPk"> <span className="icons"><FaGithub /></span> </a>
+                        <a href="https://www.instagram.com/chandan_paull/"> <span className="icons"> <FaInstagram /></span> </a>
+                        <a href="https://chandankumar-portfolio.netlify.app/"> <span className="icons"> <FaBriefcase /></span> </a>
                     </h3>
                     <p id="copy-right">&copy; 2021 | chandan Kumar</p>
                 </footer>
