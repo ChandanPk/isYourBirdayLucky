@@ -106,7 +106,7 @@ const Home = () => {
                 <footer>
                     <h3 id="icons-grid">
                         <a href="https://www.linkedin.com/in/chandan-pk-510bb817a/"> <span className="icons"><FaLinkedinIn /></span> </a>
-                        <a href="https://github.com/ChandanPk"> <span className="icons"><FaGithub /></span> </a>
+                        <a href="https://github.com/ChandanPk/isYourBirdayLucky"> <span className="icons"><FaGithub /></span> </a>
                         <a href="https://www.instagram.com/chandan_paull/"> <span className="icons"> <FaInstagram /></span> </a>
                         <a href="https://chandankumar-portfolio.netlify.app/"> <span className="icons"> <FaBriefcase /></span> </a>
                     </h3>
